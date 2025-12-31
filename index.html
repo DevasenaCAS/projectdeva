@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Raghav 20.0 - Limited Birthday Edition 🥳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text: #111;
+      --muted: #666;
+      --accent: #ff6a00;
+      --accent-red: #e60023;
+      --card: rgba(255,255,255,0.85);
+      --border: #eaeaea;
+      --star: #f5b50a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+
+      /* 🎉 Attractive premium birthday background */
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,200,150,0.35), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255,150,200,0.35), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(150,200,255,0.35), transparent 40%),
+        linear-gradient(135deg, #fff6e5, #ffe8f1, #eef4ff);
+      background-attachment: fixed;
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 10px;
+      height: 10px;
+      animation: fall linear infinite;
+      z-index: 999;
+      opacity: 0.8;
+      border-radius: 2px;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    header {
+      padding: 90px 20px 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.3rem, 5vw, 3.6rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+.image-wrapper img {
+  display: block;        /* allows margin auto to work */
+  margin: 0 auto;        /* 🔑 centers horizontally */
+  height: 340px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  
+}
+
+
+
+
+
+    .details h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .stars {
+      color: var(--star);
+      font-size: 1.1rem;
+    }
+
+    .rating span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .specs {
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .specs ul {
+      list-style: none;
+    }
+
+    .specs li {
+      margin-bottom: 12px;
+      font-size: 0.98rem;
+    }
+
+    .specs li::before {
+      content: "✔️";
+      margin-right: 10px;
+    }
+
+    .price-box {
+      margin-bottom: 30px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .new-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-red);
+      margin-top: 5px;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff8a00, #ff5a00);
+      color: #fff;
+      padding: 16px 42px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 18px 35px rgba(255,106,0,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .buy-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 45px rgba(255,106,0,0.45);
+    }
+
+    .reviews {
+      margin-top: 90px;
+    }
+
+    .reviews h3 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .review {
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .review strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 70px 20px 45px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Confetti Elements -->
+  <script>
+    for (let i = 0; i < 45; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = `hsl(${Math.random()*360}, 90%, 60%)`;
+      confetti.style.animationDuration = 3 + Math.random() * 5 + 's';
+      confetti.style.opacity = Math.random();
+      document.body.appendChild(confetti);
+    }
+  </script>
+
+  <header>
+    <h1>Raghav 20.0 🎂</h1>
+    <p>The most awaited upgrade of the decade. Faster, wiser (maybe), and officially out of teenage beta mode.</p>
+  </header>
+
+  <main class="container">
+    <section class="product">
+      <div class="image-wrapper">
+        <!-- REPLACE THIS SRC WITH YOUR AWS S3 PHOTO URL -->
+        <img src="https://webdbuc.s3.eu-north-1.amazonaws.com/raghav.jpeg" alt="Raghav 20.0 Product Image">
+      </div>
+
+      <div class="details">
+        <h2>Raghav Pro Max (Youngest Edition)</h2>
+        <p class="tagline">The last member of the gang to finally escape teenage years. Now officially 20! 🎉</p>
+
+        <div class="rating">
+          <div class="stars">★★★★★</div>
+          <span>4.9 (based on 420 reviews)</span>
+        </div>
+
+        <div class="specs">
+          <ul>
+            <li>Overclocked work ethic (codes 18+ hours/day)</li>
+            <li>Permanent "Youngest in the Gang" badge equipped</li>
+            <li>Built-in bug fixer for friends' life problems</li>
+            <li>Fuel: Biryani & coding everywhere and anywhere brings him energy</li>
+            <li>Sleep mode: Optional (rarely used)</li>
+            <li>Hardworking level: Legendary</li>
+          </ul>
+        </div>
+
+        <div class="price-box">
+          <div class="old-price">Market Price: ₹50,000</div>
+          <div class="new-price">Flash Sale: 1 Plate Chicken Biryani + 2 Waffles</div>
+        </div>
+
+        <button class="buy-btn" onclick="buyNow()">Buy Now</button>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h3>Customer Reviews 💬</h3>
+      <div class="review-grid">
+        <div class="review">
+          <strong>krithika (samiyar) ⭐⭐⭐⭐⭐</strong>
+          Still the baby of the gang, but somehow outworks all of us. Illegal levels of productivity.
+        </div>
+        <div class="review">
+          <strong>krithika aka ck ⭐⭐⭐⭐⭐</strong>
+          Finally 20 but mentally still debugging code at 3AM. Would buy again.
+        </div>
+        <div class="review">
+          <strong>balaji kishor ⭐⭐⭐⭐½</strong>
+          Runs on biryani and determination. Needs forced sleep updates though.
+        </div>
+        <div class="review">
+          <strong>dhanesh ⭐⭐⭐⭐⭐</strong>
+          The only one who fixes our bugs AND our life problems. 10/10 human.
+        </div>
+        <div class="review">
+          <strong>iyapan ⭐⭐⭐⭐⭐</strong>
+          Youngest. Hardest working. Most roasted. Legendary combo.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Raghav Inc. All rights reserved. Teenage mode permanently discontinued 😌
+  </footer>
+
+  <script>
+    function buyNow() {
+      alert("Transaction Complete! 🎉 Raghav is now permanently in your squad. No refunds allowed. ❤️");
+    }
+  </script>
+
+</body>
+</html>
+
